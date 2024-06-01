@@ -10,6 +10,7 @@ const TimeZone = () => {
   useEffect(() => {
     const fetchTimeZone = async () => {
       try {
+        console.log('API Key:', process.env.REACT_APP_IPIFY_API_KEY); // Debugging line
         const response = await axios.get(`https://geo.ipify.org/api/v1?apiKey=${process.env.REACT_APP_IPIFY_API_KEY}`);
         const { location } = response.data;
 

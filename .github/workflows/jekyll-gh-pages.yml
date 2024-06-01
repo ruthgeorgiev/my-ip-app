@@ -40,10 +40,14 @@ jobs:
       - name: Install dependencies
         run: npm install
         
-      # Build the React application
+      # Build the React application with the environment variable
       - name: Build React app
-        run: npm run build
-        
+        env:
+          REACT_APP_IPIFY_API_KEY: ${{ secrets.GEO_API_KEY }}
+        run: |
+          echo "REACT_APP_IPIFY_API_KEY=${{ secrets.GEO_API_KEY }}" >> .env
+          npm run build
+          
       # Upload the build artifacts to be deployed
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

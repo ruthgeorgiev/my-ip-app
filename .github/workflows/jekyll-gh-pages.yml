@@ -25,13 +25,13 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '16'
+          node-version: '18'
 
       - name: Install dependencies
         run: npm install
 
       - name: Print environment variable for debugging
-        run: echo $REACT_APP_IPIFY_API_KEY
+        run: echo "REACT_APP_IPIFY_API_KEY=${{ secrets.GEO_API_KEY }}"
         env:
           REACT_APP_IPIFY_API_KEY: ${{ secrets.GEO_API_KEY }}
 

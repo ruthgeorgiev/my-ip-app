@@ -16,7 +16,7 @@ export const Sidebar = styled.div`
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   position: absolute;
-  left: 40px; /* Adjusted from 20px to 40px */
+  left: 60px; /* Adjusted from 20px to 40px */
   top: 50%;
   transform: translateY(-50%); /* Center vertically */
 `;

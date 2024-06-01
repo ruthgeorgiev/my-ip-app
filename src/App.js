@@ -10,7 +10,7 @@ import GlobalStyles from './components/GlobalStyles';
 import './App.css';
 
 const StyledCard = styled(MuiCard)`
-  margin: 10px 0;
+  margin: 10px 0px;
   width: 100%;
   border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);

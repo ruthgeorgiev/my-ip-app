@@ -5,15 +5,33 @@
 }
 
 .container {
-  margin-top: 10px; /* Reduced margin */
+  margin-top: 10px;
 }
 
 .ip-address, .time-zone {
-  margin-bottom: 10px; /* Reduced margin */
+  margin-bottom: 10px;
 }
 
 .ip-address h2, .time-zone h3 {
   background: #f8f9fa;
-  padding: 5px; /* Reduced padding */
+  padding: 5px;
   border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .App {
+    padding: 10px;
+  }
+
+  .container {
+    margin-top: 5px;
+  }
+
+  .ip-address, .time-zone {
+    margin-bottom: 5px;
+  }
+
+  .ip-address h2, .time-zone h3 {
+    padding: 3px;
+  }
 }

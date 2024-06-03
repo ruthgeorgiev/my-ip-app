@@ -6,6 +6,11 @@ export const Container = styled.div`
   height: 100%;
   width: 100%;
   position: relative;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: auto;
+  }
 `;
 
 export const Sidebar = styled.div`
@@ -16,21 +21,32 @@ export const Sidebar = styled.div`
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   position: absolute;
-  left: 60px; /* Adjusted from 20px to 40px */
+  left: 60px; 
   top: 50%;
-  transform: translateY(-50%); /* Center vertically */
+  transform: translateY(-50%); 
+
+  @media (max-width: 768px) {
+    position: relative;
+    left: 0;
+    top: 0;
+    transform: none;
+    width: calc(100% - 40px);
+    height: auto;
+    padding: 10px;
+    margin: 10px auto;
+  }
 `;
 
 export const Header = styled.h1`
-  font-size: 20px; /* Reduced font size */
-  margin-bottom: 10px; /* Reduced margin */
+  font-size: 20px;
+  margin-bottom: 10px;
   text-align: center;
   color: #333;
 `;
 
 export const SubHeader = styled.h2`
-  font-size: 16px; /* Reduced font size */
-  margin-bottom: 10px; /* Reduced margin */
+  font-size: 16px;
+  margin-bottom: 10px;
   text-align: center;
   color: #666;
 `;

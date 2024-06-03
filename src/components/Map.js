@@ -5,7 +5,6 @@ import L from 'leaflet';
 import styled from 'styled-components';
 import 'leaflet/dist/leaflet.css';
 
-// Custom marker icon using Lordicon
 const lordiconHtml = `
   <lord-icon
     src="https://cdn.lordicon.com/tdtlrbly.json"
@@ -30,6 +29,11 @@ const MapWrapper = styled.div`
   top: 0;
   left: 0;
   z-index: 1;
+
+  @media (max-width: 768px) {
+    position: relative;
+    height: 300px;
+  }
 `;
 
 const PopupContent = styled.div`
@@ -50,7 +54,7 @@ const Map = ({ location, ip, localTime }) => {
 
   return (
     <MapWrapper>
-      <MapContainer center={position} zoom={13} style={{ height: '100%', width: '100%', position: 'absolute', top: 0, left: 0 }}>
+      <MapContainer center={position} zoom={13} style={{ height: '100%', width: '100%' }}>
         <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           attribution="&copy; <a href=&quot;https://www.openstreetmap.org/copyright&quot;>OpenStreetMap</a> contributors"
